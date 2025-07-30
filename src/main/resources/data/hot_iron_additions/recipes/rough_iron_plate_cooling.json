@@ -1,0 +1,10 @@
+{
+    "type": "hot_iron:cooling",
+    "ingredients": [{ 
+    	"item": "hot_iron_additions:hot_iron_plate"
+    	}], 
+    "output": { 
+    	"item": "hot_iron_additions:rough_iron_plate",
+    	"count": 1
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "hot_iron:forging",
+  "ingredients": [
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    }
+  ],
+  "output": {
+    "item": "minecraft:air",
+    "count": 1
+  }
+}

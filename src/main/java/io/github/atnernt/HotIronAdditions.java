@@ -5,8 +5,11 @@ import com.mojang.logging.LogUtils;
 import net.regen.hotiron.HotIronMod;
 import net.regen.hotiron.init.HotIronModMenus;
 import net.regen.hotiron.init.HotIronModTabs;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -51,19 +54,48 @@ public class HotIronAdditions
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> ROUGH_IRON_INGOT_ITEM = ITEMS.register("rough_iron_ingot", () -> new PolishableItem(new Item.Properties()));
+    
+    public static final RegistryObject<Item> ROUGH_IRON_BUCKET_ITEM = ITEMS.register("rough_iron_bucket", () -> new PolishableItem(new Item.Properties()));
+    public static final RegistryObject<Item> HOT_IRON_BUCKET_ITEM = ITEMS.register("hot_iron_bucket", () -> new HotItem(new Item.Properties()));
+    
+    public static final RegistryObject<Item> ROUGH_IRON_PLATE_ITEM = ITEMS.register("rough_iron_plate", () -> new PolishableItem(new Item.Properties()));
+    public static final RegistryObject<Item> HOT_IRON_PLATE_ITEM = ITEMS.register("hot_iron_plate", () -> new HotItem(new Item.Properties()));
+    
+    
     public static final RegistryObject<Item> UNFIRED_IRON_MOLD_ITEM = ITEMS.register("unfired_iron_ingot_mold", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> FIRED_IRON_MOLD_ITEM = ITEMS.register("fired_iron_ingot_mold", () -> new FiredIronIngotMoldItem(new Item.Properties()));
-    public static final RegistryObject<Item> ROUGH_IRON_INGOT_ITEM = ITEMS.register("rough_iron_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIRED_IRON_MOLD_ITEM = ITEMS.register("fired_iron_ingot_mold", () -> new FiredIronIngotMoldItem(new Item.Properties(), HotIronAdditions.ROUGH_IRON_INGOT_ITEM.get()));
 
+    /*public static final RegistryObject<Item> B = ITEMS.register("alexandrite_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));*/
+    public static final RegistryObject<Item> BRIGANDINE_CHESTPLATE_ITEM = ITEMS.register("brigandine_chestplate",
+            () -> new ArmorItem(ModArmourMaterials.BRIGANDINE, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> BRIGANDINE_GREAVES_ITEM = ITEMS.register("brigandine_greaves",
+            () -> new ArmorItem(ModArmourMaterials.BRIGANDINE, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> HEAVY_LEATHER_BOOTS_ITEM = ITEMS.register("brigandine_boots",
+            () -> new ArmorItem(ModArmourMaterials.BRIGANDINE, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> HOT_IRON_ADDITIONS_TAB = CREATIVE_MODE_TABS.register("hot_iron_additions", () -> CreativeModeTab.builder()
             .withTabsBefore(HotIronModTabs.HOT_IRON.getId())
+            .title(Component.translatable("item_group.hot_iron_additions.hot_iron_additions"))
             .icon(() -> ROUGH_IRON_INGOT_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
             	output.accept(UNFIRED_IRON_MOLD_ITEM.get());
                 output.accept(FIRED_IRON_MOLD_ITEM.get());
-                output.accept(ROUGH_IRON_INGOT_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(HOT_IRON_BUCKET_ITEM.get());
+                output.accept(HOT_IRON_PLATE_ITEM.get());
+                output.accept(ROUGH_IRON_INGOT_ITEM.get());
+                output.accept(ROUGH_IRON_BUCKET_ITEM.get());
+                output.accept(ROUGH_IRON_PLATE_ITEM.get());
+                output.accept(BRIGANDINE_CHESTPLATE_ITEM.get());
+                output.accept(BRIGANDINE_GREAVES_ITEM.get());
+                output.accept(HEAVY_LEATHER_BOOTS_ITEM.get());
+                // Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
     public HotIronAdditions(FMLJavaModLoadingContext context)
@@ -88,6 +120,7 @@ public class HotIronAdditions
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

@@ -1,14 +1,24 @@
 {
+  "item_group.hot_iron_additions.hot_iron_additions": "Hot Iron Additions",
   "advancements.story.stonier_stone.title": "Stonier Stone",
   "advancements.story.stonier_stone.descr": "Mine some Raw Iron, the start of something great",
   "advancements.story.moving_up.title": "Moving Up",
   "advancements.story.moving_up.descr": "Obtain your first Iron Ingot, albeit a little rough around the edges",
   "advancements.story.smelt_iron.descr": "Polish an Iron Ingot into a more refined form",
   "item.hot_iron_additions.rough_iron_ingot": "Rough Iron Ingot",
+  "item.hot_iron_additions.rough_iron_bucket": "Rough Iron Bucket",
+  "item.hot_iron_additions.rough_iron_plate": "Rough Iron Plate",
+  "item.hot_iron_additions.hot_iron_bucket": "Hot Iron Bucket",
+  "item.hot_iron_additions.hot_iron_plate": "Hot Iron Plate",
+  "item.hot_iron_additions.brigandine_chestplate": "Brigandine Chestplate",
+  "item.hot_iron_additions.brigandine_greaves": "Brigandine Greaves",
+  "item.hot_iron_additions.brigandine_boots": "Heavy Leather Boots",
   "item.hot_iron_additions.unfired_iron_ingot_mold": "Unfired Iron Ingot Mold",
   "item.hot_iron_additions.fired_iron_ingot_mold": "Fired Iron Ingot Mold",
   "item.hot_iron_additions.tooltips.break_it": "§7Use on a §6Hard Object §7to break open",
   "item.hot_iron_additions.tooltips.polish_it": "§7Polish using a §6Grindstone",
   "item.hot_iron_additions.tooltips.heat_it": "§7Heat up on §6High Fire",
-  "item.hot_iron_additions.tooltips.hold_shift": "§8Hold §7Shift §8for additional information"
+  "item.hot_iron_additions.tooltips.pick_it": "§7Use §6Smithing Tongs §7to pick up safely",
+  "item.hot_iron_additions.tooltips.hold_shift": "§8Hold §7Shift §8for additional information",
+  "item.hot_iron_additions.tooltips.smithing_tongs": "§7Click on a §6Smithing Anvil §7to place held item into the crafting grid."
   }

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": " ",
+    "pattern":
+    [
+        "L L",
+        "I I"
+    ],
+    "key":{
+    	"L": { "item": "minecraft:leather" },
+        "I": { "item": "hot_iron:iron_plate"}
+    },
+    "result":{
+            "item": "hot_iron_additions:brigandine_boots"
+    }
+}

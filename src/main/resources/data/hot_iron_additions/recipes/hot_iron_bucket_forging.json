@@ -1,0 +1,36 @@
+{
+  "type": "hot_iron:forging",
+  "ingredients": [
+    {
+      "item": "hot_iron:hot_iron_ingot"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "item": "hot_iron:hot_iron_ingot"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "item": "hot_iron:hot_iron_ingot"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    },
+    {
+      "tag": "hot_iron:jei_empty_tag"
+    }
+  ],
+  "output": {
+    "item": "hot_iron_additions:hot_iron_bucket",
+    "count": 1
+  }
+}
