@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:raw_iron"
+    },
+    "title": {
+      "translate": "advancements.story.stonier_stone.title"
+    },
+    "description": {
+      "translate": "advancements.story.stonier_stone.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "moving_up": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:raw_iron"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 40,
+    "recipes": [
+      "hot_iron_additions:unfired_iron_ingot_mold"
+    ]
+  },
+  "parent": "minecraft:story/upgrade_tools"
+}

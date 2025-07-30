@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "hot_iron_additions:rough_iron_ingot"
+    },
+    "title": {
+      "translate": "advancements.story.moving_up.title"
+    },
+    "description": {
+      "translate": "advancements.story.moving_up.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "moving_up": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hot_iron_additions:rough_iron_ingot"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20,
+    "recipes": [
+      "hot_iron_additions:iron_ingot_from_grindstone"
+    ]
+  },
+  "parent": "hot_iron_additions:story/stonier_stone"
+}

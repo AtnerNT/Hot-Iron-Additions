@@ -1,0 +1,10 @@
+{
+    "type": "hot_iron:polishing",
+    "ingredients": [{ 
+    	"item": "hot_iron_additions:rough_iron_ingot"
+    	}], 
+    "output": { 
+    	"item": "minecraft:iron_ingot",
+    	"count": 1
+    }
+}

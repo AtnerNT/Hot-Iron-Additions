@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "iron_ingot",
+  "ingredient": {
+    "item": "hot_iron_additions:unfired_iron_ingot_mold"
+  },
+  "result": "hot_iron_additions:fired_iron_ingot_mold"
+}

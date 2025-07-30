@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:blasting",
+    "category": " ",
+    "ingredient":[{
+    	"item": "minecraft:raw_iron"
+    		}],
+   
+    "result":{
+            "item": "hot_iron:hot_iron_ingot"
+    }
+}

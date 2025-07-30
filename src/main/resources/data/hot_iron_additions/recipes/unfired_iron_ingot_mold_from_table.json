@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": " ",
+    "pattern":
+    [
+        "CIC",
+        "CCC"
+    ],
+    "key":{
+    	"I": { "item": "minecraft:raw_iron" },
+        "C": { "item": "minecraft:clay_ball"}
+    },
+    "result":{
+            "item": "hot_iron_additions:unfired_iron_ingot_mold"
+    }
+}
